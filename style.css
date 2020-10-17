@@ -1,0 +1,100 @@
+body {  
+  min-height: 768px;
+  background: linear-gradient(to bottom right, #a7a7a7, #00c3ff);
+  background-size: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+  overflow-y: hidden;
+}
+
+#icon {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 20vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: iconReveal 0.7s;
+    animation-delay: 0.3s;
+}
+
+#name {
+    position: absolute;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 17px;
+    text-align: center;
+    color: white;
+    top: 30vh;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 0.7s;
+    animation-delay: 0.3s;
+}
+
+#screen {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 0px 51px -5px rgba(77,77,77,1);
+    -moz-box-shadow: 0px 0px 51px -5px rgba(77,77,77,1);
+    box-shadow: 0px 0px 51px -5px rgba(77,77,77,1);
+    animation: screenReveal 0.3s;
+    animation-delay: 0.3s;
+}
+
+#gh {
+    position: relative;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50% ,-50%);
+    outline: none;
+    border: none;
+    color: white;
+    background-color: rgb(0, 119, 255);
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    transition: background-color 0.5s ease;
+}
+
+#gh:hover {
+    background-color: rgba(0, 119, 255, 0.699);
+}
+
+@keyframes iconReveal {
+    from {
+        width: 30px;
+        height: 30px;
+    }
+
+    to {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes screenReveal {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
